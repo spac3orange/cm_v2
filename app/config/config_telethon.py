@@ -6,12 +6,12 @@ from telethon import TelegramClient, errors, functions
 from environs import Env
 from telethon.tl.functions.messages import SendMessageRequest
 from telethon.tl.types import InputPeerChannel
-from app.config.logger import logger
+from .logger import logger
 from telethon.tl.functions.channels import JoinChannelRequest, GetFullChannelRequest
 import datetime
 from telethon.tl.functions.messages import GetHistoryRequest
 from datetime import timedelta, datetime
-from app.config import aiogram_bot, config_aiogram
+from . import aiogram_bot, config_aiogram
 from telethon.tl.functions.account import UpdateProfileRequest, UpdateUsernameRequest
 from telethon.tl.functions.photos import UploadProfilePhotoRequest
 from telethon.tl.functions.users import GetFullUserRequest
@@ -22,7 +22,7 @@ import aiofiles
 import re
 from telethon.tl.types import InputPeerChat
 from environs import Env
-from app.crud import json_action
+from ..crud import json_action
 from pprint import pprint
 import pytz
 from telethon.tl.functions.messages import ImportChatInviteRequest
