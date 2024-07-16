@@ -22,7 +22,7 @@ import aiofiles
 import re
 from telethon.tl.types import InputPeerChat
 from environs import Env
-from ..crud import json_action
+from app.crud import json_action
 from pprint import pprint
 import pytz
 from telethon.tl.functions.messages import ImportChatInviteRequest
