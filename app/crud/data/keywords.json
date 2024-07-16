@@ -1,0 +1,86 @@
+[
+    "аренда авто", "прокат авто", "напрокат авто", "взять авто", "снять авто", "ищу авто", 
+    "в аренду авто", "авто посуточно", "авто месяц", "авто сутки", "авто долгосрочная", 
+    "авто помесячная",
+    "арендую авто", "сниму авто", "в прокат авто", "возьму авто", "сниму авто",
+    
+    "аренда машины", "прокат машины", "напрокат машина", "взять машину", "снять машину", 
+    "ищу машину", "в аренду машину", "машина посуточно", "машина месяц", "машина сутки", 
+    "машина долгосрочная", "машина помесячная",
+    "арендую машину", "сниму машину", "в прокат машину", "возьму машину", "сниму машину",
+    
+    "аренда транспорт", "прокат транспорт", "напрокат транспорт", "взять транспорт", 
+    "снять транспорт", "ищу транспорт", "в аренду транспорт", "транспорт посуточно", 
+    "транспорт месяц", "транспорт сутки", "транспорт долгосрочная", "транспорт помесячная",
+    "арендую транспорт", "сниму транспорт", "в прокат транспорт", "возьму транспорт", 
+    "сниму транспорт",
+    
+    "аренда байк", "прокат байк", "напрокат байк", "взять байк", "снять байк", "ищу байк", 
+    "в аренду байк", "байк посуточно", "байк месяц", "байк сутки", "байк долгосрочная", 
+    "байк помесячная",
+    "арендую байк", "сниму байк", "в прокат байк", "возьму байк", "сниму байк",
+    
+    "аренда скутер", "прокат скутер", "напрокат скутер", "взять скутер", "снять скутер", 
+    "ищу скутер", "в аренду скутер", "скутер посуточно", "скутер месяц", "скутер сутки", 
+    "скутер долгосрочная", "скутер помесячная",
+    "арендую скутер", "сниму скутер", "в прокат скутер", "возьму скутер", "сниму скутер",
+    
+    "аренда мотоцикл", "прокат мотоцикл", "напрокат мотоцикл", "взять мотоцикл", 
+    "снять мотоцикл", "ищу мотоцикл", "в аренду мотоцикл", "мотоцикл посуточно", 
+    "мотоцикл месяц", "мотоцикл сутки", "мотоцикл долгосрочная", "мотоцикл помесячная",
+    "арендую мотоцикл", "сниму мотоцикл", "в прокат мотоцикл", "возьму мотоцикл", 
+    "сниму мотоцикл",
+    
+    "аренда мото", "прокат мото", "напрокат мото", "взять мото", "снять мото", 
+    "ищу мото", "в аренду мото", "мото посуточно", "мото месяц", "мото сутки", 
+    "мото долгосрочная", "мото помесячная",
+    "арендую мото", "сниму мото", "в прокат мото", "возьму мото", "сниму мото",
+    
+    "авто на прокат", "машина на прокат",
+    
+    "скутер на прокат", "байк на прокат",
+    
+    "мото на прокат", "мотоцикл на прокат",
+    
+    "rent a car", "rent a car", "rent a car", "rent a car", "looking for a car", 
+    "rent a car", "car daily", "car month", "car day", "car long-term", "car monthly",
+    "rent a car", "rent a car", "rent a car", "take a car", "rent a car",
+    
+    "rent a car", "rent a car", "rent a car", "rent a car", "looking for a car", 
+    "rent a car", "car for rent", "car for rent", "car for a month", "car for a day", 
+    "long-term car", "monthly car",
+    
+    "rent transport", "rent transport", "rent transport", "take transport", 
+    "rent transport", "looking for transport", "rent transport", "daily transport", 
+    "transport month", "transport day", "long-term transport", "monthly transport",
+    "I rent a transport", "rent a transport", "rent a transport", "take a transport", 
+    "rent a transport",
+    
+    "rent a bike", "rent a bike", "rent a bike", "rent a bike", "rent a bike", 
+    "looking for a bike", "rent a bike", "bike for rent", "bike for a month", 
+    "bike for a day", "bike long-term", "bike monthly",
+    "rent a bike", "rent a bike", "rent a bike", "rent a bike", "rent a bike",
+    
+    "rent a scooter", "rent a scooter", "rent a scooter", "rent a scooter", 
+    "rent a scooter", "looking for a scooter", "rent a scooter", "scooter daily", 
+    "scooter month", "scooter day", "scooter long-term", "scooter monthly",
+    "rent a scooter", "rent a scooter", "rent a scooter", "rent a scooter", 
+    "rent a scooter",
+    
+    "rent a motorcycle", "rent a motorcycle", "rent a motorcycle", "rent a motorcycle", 
+    "I'm looking for a motorcycle", "rent a motorcycle", "motorcycle daily", 
+    "motorcycle month", "motorcycle day", "motorcycle long-term", "motorcycle monthly",
+    "rent a motorcycle", "rent a motorcycle", "rent a motorcycle", "rent a motorcycle", 
+    "rent a motorcycle",
+    
+    "rent a moto", "rent a moto", "rent a moto", "rent a moto", "rent a moto", 
+    "looking for a moto", "rent a moto", "moto daily", "moto month", "moto day", 
+    "moto long-term", "moto monthly",
+    "rent a moto", "rent a moto", "rent a moto", "take a moto", "rent a moto",
+    
+    "car rental", "car rental",
+    
+    "scooter for rent", "bike for rent",
+    
+    "moto for rent", "motorcycle for rent"
+]
