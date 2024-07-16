@@ -1,0 +1,8 @@
+# Ignore the .env file
+.env
+
+# Ignore the venv directory
+venv/
+
+#ignore sessions folder
+crud/data/telethon_sessions
