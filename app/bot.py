@@ -1,10 +1,10 @@
 import asyncio
 from aiogram import Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
-from config import aiogram_bot
-from config.logger import logger
-from keyboards import set_commands_menu
-from handlers import start, keywords_settings, chats_settings, interval_settings
+from app.config import aiogram_bot
+from app.config.logger import logger
+from app.keyboards import set_commands_menu
+from app.handlers import start, keywords_settings, chats_settings, interval_settings
 
 
 async def start_params() -> None:
