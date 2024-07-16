@@ -18,7 +18,7 @@ async def open_json(path):
 
 async def write_json(lst, filename):
     try:
-        with open(f'crud/data/{filename}', 'w', encoding='utf-8') as file:
+        with open(f'app/crud/data/{filename}', 'w', encoding='utf-8') as file:
             json.dump(lst, file, indent=4, ensure_ascii=False)
     except Exception as e:
         logger.error(e)

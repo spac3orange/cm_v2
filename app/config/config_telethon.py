@@ -35,7 +35,7 @@ class TelethonMonitorChats:
         self.api_id = env('API_ID')
         self.api_hash = env('API_HASH')
         print(self.api_id, self.api_hash, session_name)
-        self.session_name = 'crud/data/telethon_sessions/{}'.format(session_name)
+        self.session_name = 'app/crud/data/telethon_sessions/{}'.format(session_name)
         print(self.session_name)
         self.client = TelegramClient(self.session_name, self.api_id, self.api_hash)
 
@@ -87,8 +87,8 @@ class TelethonMonitorChats:
             return
         try:
             approved_messages = []
-            chats_list = await json_action.open_json('crud/data/chats.json')
-            kw_list = await json_action.open_json('crud/data/keywords.json')
+            chats_list = await json_action.open_json('app/crud/data/chats.json')
+            kw_list = await json_action.open_json('app/crud/data/keywords.json')
             if chats_list == 'Нет' or kw_list == 'Нет':
                 logger.error('Chats or keywords are empty.')
                 return

@@ -15,7 +15,7 @@ router.message.filter(
 
 
 async def groups_settings(message):
-    chats_list = await json_action.open_json('crud/data/chats.json')
+    chats_list = await json_action.open_json('app/crud/data/chats.json')
     if chats_list != 'Нет':
         string = ''
         print(chats_list)
@@ -30,7 +30,7 @@ async def groups_settings(message):
 @router.callback_query(F.data == 'tg_groups')
 async def p_groups(callback: CallbackQuery):
     await callback.answer()
-    chats_list = await json_action.open_json('crud/data/chats.json')
+    chats_list = await json_action.open_json('app/crud/data/chats.json')
     if chats_list != 'Нет':
         string = ''
         for chat in chats_list:
@@ -51,7 +51,7 @@ async def p_add_chat(callback: CallbackQuery, state: FSMContext):
 @router.message(states.AddChat.input_chat)
 async def save_chat(message: Message, state: FSMContext):
     new_chat = message.text
-    chats_lst = await json_action.open_json('crud/data/chats.json')
+    chats_lst = await json_action.open_json('app/crud/data/chats.json')
     if chats_lst == 'Нет':
         chats_lst = [new_chat]
     else:
@@ -59,7 +59,7 @@ async def save_chat(message: Message, state: FSMContext):
     filename = 'chats.json'
     await json_action.write_json(chats_lst, filename)
     await message.answer('Чат добавлен.')
-    chats_lst = await json_action.open_json('crud/data/chats.json')
+    chats_lst = await json_action.open_json('app/crud/data/chats.json')
     await state.clear()
     await groups_settings(message)
 
@@ -74,7 +74,7 @@ async def p_del_chat(callback: CallbackQuery, state: FSMContext):
 @router.message(states.DelChat.input_chat)
 async def chat_deleted(message: Message, state: FSMContext):
     del_chat = message.text
-    chats_list = await json_action.open_json('crud/data/chats.json')
+    chats_list = await json_action.open_json('app/crud/data/chats.json')
     if chats_list == 'Нет':
         await message.answer('Список чатов пуст.')
         await state.clear()

@@ -17,7 +17,7 @@ router.message.filter(
 
 
 async def kw_settings(message):
-    keywords_list = await json_action.open_json('crud/data/keywords.json')
+    keywords_list = await json_action.open_json('app/crud/data/keywords.json')
     kw_str = ''
     for kw in keywords_list:
         kw_str += f'\n{kw}'
@@ -28,7 +28,7 @@ async def kw_settings(message):
 @router.callback_query(F.data == 'keywords')
 async def p_keywords(callback: CallbackQuery):
     await callback.answer()
-    keywords_list = await json_action.open_json('crud/data/keywords.json')
+    keywords_list = await json_action.open_json('app/crud/data/keywords.json')
     kw_str = ''
     for kw in keywords_list:
         kw_str += f'\n{kw}'
@@ -47,7 +47,7 @@ async def p_add_kw(callback: CallbackQuery, state: FSMContext):
 async def save_kw(message: Message, state: FSMContext):
     #await aiogram_bot.send_chat_action(message.chat.id, 'typing')
     new_kw = message.text
-    kw_list = await json_action.open_json('crud/data/keywords.json')
+    kw_list = await json_action.open_json('app/crud/data/keywords.json')
     if kw_list == 'Нет':
         chats_lst = [new_kw]
     else:
@@ -56,7 +56,7 @@ async def save_kw(message: Message, state: FSMContext):
     file_name = 'keywords.json'
     await json_action.write_json(kw_list, file_name)
     await message.answer('Ключевое слово успешно добавлено.')
-    keywords_list = await json_action.open_json('crud/data/keywords.json')
+    keywords_list = await json_action.open_json('app/crud/data/keywords.json')
     await state.clear()
     kw_str = ''
     for kw in keywords_list:
@@ -75,7 +75,7 @@ async def p_del_kw(callback: CallbackQuery, state: FSMContext):
 @router.message(states.DelKw.input_kw)
 async def kw_deleted(message: Message, state: FSMContext):
     del_kw = message.text
-    kw_list = await json_action.open_json('crud/data/keywords.json')
+    kw_list = await json_action.open_json('app/crud/data/keywords.json')
     if kw_list == 'Нет':
         await message.answer('Список ключевых слов пуст.')
         await state.clear()
