@@ -51,14 +51,14 @@ class TelethonMonitorChats:
                     message_text = message.message.lower()
                     if len(message_text) > 150:
                         continue
-                    message_text = message_text.split(' ')
-                    print(message_text)
+                    # message_text = message_text.split(' ')
+                    # print(message_text)
                 else:
                     continue
                 if message.date < offset_date:
                     continue
                 for kw in kw_list:
-                    if kw in message_text:
+                    if kw.lower() in message.text.lower():
                         logger.info('Keyword found.')
                         if message not in messages:
                             logger.info('message added to forwarded ')
