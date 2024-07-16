@@ -4,40 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33314575-7c60-4dcd-86ad-255e0b4b258c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/chat_monitor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/config_aiogram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/config_telethon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/logger/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config/logger/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/data/telethon_sessions/+998 88 946 16 03.session" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/crud/json_action.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/filters/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/filters/is_admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/chats_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/interval_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/keywords_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/keyboards/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/keyboards/main_kb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/keyboards/pop_up_menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/states/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/states/states.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/scheduler.py" afterDir="false" />
+    <list default="true" id="33314575-7c60-4dcd-86ad-255e0b4b258c" name="Changes" comment="v1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crud/data/telethon_sessions/+998 88 946 16 03.session" beforeDir="false" afterPath="$PROJECT_DIR$/app/crud/data/telethon_sessions/+998 88 946 16 03.session" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +101,38 @@
       <option name="presentableId" value="Default" />
       <updated>1720100134636</updated>
     </task>
+    <task id="LOCAL-00001" summary="v1">
+      <option name="closed" value="true" />
+      <created>1721125853208</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721125853208</updated>
+    </task>
+    <task id="LOCAL-00002" summary="v1">
+      <option name="closed" value="true" />
+      <created>1721126298436</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721126298436</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1" />
   </component>
 </project>
