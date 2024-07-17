@@ -41,11 +41,12 @@ class TelethonMonitorChats:
 
     async def get_chat_messages(self, chat_link, kw_list, interval, offset_date):
         try:
-
+            current_time = datetime.datetime.now()
+            offset_date = current_time - datetime.timedelta(minutes=interval)
             messages = []
             print(chat_link)
             entity = await self.client.get_entity(chat_link)
-            async for message in self.client.iter_messages(entity.id, wait_time=1, limit=30):
+            async for message in self.client.iter_messages(entity.id, wait_time=1, limit=30, offset_date=offset_date):
                 print(message.text)
                 if message.message:
                     message_text = message.message.lower()
