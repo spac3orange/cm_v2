@@ -41,7 +41,7 @@ class TelethonMonitorChats:
 
     async def get_chat_messages(self, chat_link, kw_list, interval, offset_date):
         try:
-            current_time = datetime.datetime.now()
+            current_time = datetime.now()
             offset_date = current_time - datetime.timedelta(minutes=interval)
             messages = []
             print(chat_link)
