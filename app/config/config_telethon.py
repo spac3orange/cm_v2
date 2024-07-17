@@ -10,7 +10,6 @@ from app.config.logger import logger
 from telethon.tl.functions.channels import JoinChannelRequest, GetFullChannelRequest
 import datetime
 from telethon.tl.functions.messages import GetHistoryRequest
-from datetime import timedelta, datetime
 from app.config import aiogram_bot, config_aiogram
 from environs import Env
 from app.crud import json_action
@@ -41,7 +40,7 @@ class TelethonMonitorChats:
 
     async def get_chat_messages(self, chat_link, kw_list, interval, offset_date):
         try:
-            current_time = datetime.now()
+            current_time = datetime.datetime.now()
             offset_date = current_time - datetime.timedelta(minutes=interval)
             messages = []
             print(chat_link)
@@ -98,8 +97,8 @@ class TelethonMonitorChats:
             await self.client.connect()
             print(await self.client.get_me())
             print(self.client.is_connected())
-            utc_now = datetime.now(pytz.utc)
-            offset_date = utc_now - timedelta(minutes=interval)
+            utc_now = datetime.datetime.now(pytz.utc)
+            offset_date = utc_now - datetime.timedelta(minutes=interval)
             for chat in chats_list:
                 logger.info(f'checking chat {chat}...')
                 try:
@@ -142,7 +141,7 @@ class TelethonMonitorChats:
                             logger.error(e)
                             username = None
 
-                        message_time = datetime.fromtimestamp(message.date.timestamp(), tz=pytz.utc)
+                        message_time = datetime.datetime.fromtimestamp(message.date.timestamp(), tz=pytz.utc)
                         # Преобразуйте время в часовой пояс вашего сервера
                         message_time = message_time.astimezone(server_timezone)
                         # Форматируйте дату в строку
