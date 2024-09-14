@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33314575-7c60-4dcd-86ad-255e0b4b258c" name="Changes" comment="v2">
       <change beforePath="$PROJECT_DIR$/app/crud/data/telethon_sessions/+998 88 946 16 03.session" beforeDir="false" afterPath="$PROJECT_DIR$/app/crud/data/telethon_sessions/+998 88 946 16 03.session" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/chats_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/chats_settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,8 @@
     "Python.bot.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/NC_BOT"
+    "last_opened_file_path": "D:/NC_BOT",
+    "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -284,7 +284,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726281697787</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="v2">
+      <option name="closed" value="true" />
+      <created>1726282068962</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1726282068962</updated>
+    </task>
+    <task id="LOCAL-00025" summary="v2">
+      <option name="closed" value="true" />
+      <created>1726282179487</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726282179487</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

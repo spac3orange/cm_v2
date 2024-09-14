@@ -44,7 +44,7 @@ class TelethonMonitorChats:
             print(chat_link)
             entity = await self.client.get_entity(chat_link)
             async for message in self.client.iter_messages(entity.id, wait_time=1, limit=30):
-                print(message.text)
+                # print(message.text)
                 if message.message:
                     message_text = message.message.lower()
                     if len(message_text) > 150:
