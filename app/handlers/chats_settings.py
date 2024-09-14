@@ -59,7 +59,7 @@ async def p_add_chat(callback: CallbackQuery, state: FSMContext):
     await state.set_state(states.AddChat.input_chat)
 
 
-@router.message(states.AddChat.input_chat)
+@router.message(states.AddChat.input_chat, lambda message: len(message.text) <= 30)
 async def save_chat(message: Message, state: FSMContext):
     new_chat = message.text
     chats_lst = await json_action.open_json('app/crud/data/chats.json')
@@ -73,6 +73,7 @@ async def save_chat(message: Message, state: FSMContext):
     chats_lst = await json_action.open_json('app/crud/data/chats.json')
     await state.clear()
     await groups_settings(message)
+
 
 
 @router.callback_query(F.data == 'del_chat')
@@ -98,3 +99,8 @@ async def chat_deleted(message: Message, state: FSMContext):
         else:
             await message.answer(f'Чат [{del_chat}] не найден в списке чатов.')
         await state.clear()
+
+
+@router.message(states.AddChat.input_chat)
+async def save_chat(message: Message, state: FSMContext):
+    await message.answer('Ошибка! Длина имени чата должна быть меньше 30 символов.')
