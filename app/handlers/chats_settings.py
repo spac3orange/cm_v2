@@ -43,6 +43,7 @@ async def p_groups(callback: CallbackQuery):
         await callback.message.answer('<b>Список чатов Telegram: </b>'
                                       f'\n{string}', reply_markup=main_kb.chats_action(), parse_mode='HTML', disable_web_page_preview=True)
     else:
+        print(1)
         midpoint = len(string) // 2 # Находим середину строки
         part1 = string[:midpoint] # Первая часть строки
         part2 = string[midpoint:] # Вторая часть строки
