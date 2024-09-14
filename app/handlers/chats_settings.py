@@ -38,6 +38,7 @@ async def p_groups(callback: CallbackQuery):
     else:
         string = chats_list
     max_length = 4060
+    print(len(string))
     if len(string) < max_length:
         await callback.message.answer('<b>Список чатов Telegram: </b>'
                                       f'\n{string}', reply_markup=main_kb.chats_action(), parse_mode='HTML', disable_web_page_preview=True)
