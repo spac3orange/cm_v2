@@ -79,16 +79,17 @@ class TelethonMonitorChats:
         except Exception as e:
             logger.error(e)
 
-    async def get_chats_history(self, interval):
+    async def get_chats_history(self, interval, chat_list, kw_list, session_name):
+        logger.info(f'session {session_name}')
         logger.info('Checking groups for new messages...')
-        running = await check_task_is_running()
-        if running:
-            logger.error('Previous monitor is running. Schedule skipped...')
-            return
+        # running = await check_task_is_running()
+        # if running:
+        #     logger.error('Previous monitor is running. Schedule skipped...')
+        #     return
         try:
             approved_messages = []
-            chats_list = await json_action.open_json('app/crud/data/chats.json')
-            kw_list = await json_action.open_json('app/crud/data/keywords.json')
+            chats_list = chat_list
+
             if chats_list == 'Нет' or kw_list == 'Нет':
                 logger.error('Chats or keywords are empty.')
                 return

@@ -37,9 +37,18 @@ async def p_groups(callback: CallbackQuery):
             string += f'\n{chat}'
     else:
         string = chats_list
-    await callback.message.answer('<b>Список чатов Telegram: </b>'
-                                  f'\n{string}', reply_markup=main_kb.chats_action(), parse_mode='HTML', disable_web_page_preview=True)
-
+    max_length = 4060
+    if len(string) < max_length:
+        await callback.message.answer('<b>Список чатов Telegram: </b>'
+                                      f'\n{string}', reply_markup=main_kb.chats_action(), parse_mode='HTML', disable_web_page_preview=True)
+    else:
+        midpoint = len(string) // 2 # Находим середину строки
+        part1 = string[:midpoint] # Первая часть строки
+        part2 = string[midpoint:] # Вторая часть строки
+        await callback.message.answer('<b>Список чатов Telegram: </b>'
+                                      f'\n{part1}', reply_markup=main_kb.chats_action(), parse_mode='HTML', disable_web_page_preview=True)
+        await callback.message.answer('<b>Список чатов Telegram: </b>'                                                                    
+                                      f'\n{part2}', reply_markup=main_kb.chats_action(), parse_mode='HTML', disable_web_page_preview=True)
 
 @router.callback_query(F.data == 'add_chat')
 async def p_add_chat(callback: CallbackQuery, state: FSMContext):
