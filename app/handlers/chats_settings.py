@@ -65,6 +65,9 @@ async def save_chat(message: Message, state: FSMContext):
     chats_lst = await json_action.open_json('app/crud/data/chats.json')
     if chats_lst == 'Нет':
         chats_lst = [new_chat]
+    elif new_chat in chats_lst:
+        await message.answer(f'Ошибка! Чат {new_chat} уже есть в списке.')
+        return
     else:
         chats_lst.append(new_chat)
     filename = 'chats.json'
