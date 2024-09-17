@@ -106,4 +106,16 @@ async def chat_deleted(message: Message, state: FSMContext):
 
 @router.message(states.AddChat.input_chat)
 async def save_chat(message: Message, state: FSMContext):
-    await message.answer('Ошибка! Длина имени чата должна быть меньше 30 символов.')
+    new_chats = message.text.split('\n')
+    chats_lst = await json_action.open_json('app/crud/data/chats.json')
+    for chat in new_chats:
+        if chat in chats_lst:
+            await message.answer(f'Чат {chat} уже есть в списке.')
+            continue
+        else:
+            chats_lst.append(chat)
+            await message.answer(f'Чат {chat} добавлен в список.')
+    filename = 'chats.json'
+    await json_action.write_json(chats_lst, filename)
+    await state.clear()
+

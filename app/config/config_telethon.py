@@ -19,7 +19,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 
 
 server_timezone = pytz.timezone('Europe/Moscow')
-
+last_message = None
 
 async def check_task_is_running():
     tasks = asyncio.all_tasks()
@@ -149,6 +149,12 @@ class TelethonMonitorChats:
                                        f'\n<b>Чат:</b> @{chat_name}'
                                        f'\n<b>Пользователь:</b> @{username}'
                                        f'\n<b>Сообщение:</b>\n{message.message}')
+
+                        global last_message
+                        if last_message == bot_message:
+                            logger.warning('message skipped cos duplicate')
+                            return
+                        last_message = bot_message
                         if isinstance(admin_list, list):
                             for admin in admin_list:
                                 await aiogram_bot.send_message(admin, bot_message, parse_mode='HTML')

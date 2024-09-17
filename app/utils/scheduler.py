@@ -40,6 +40,7 @@ class ChatMonitor:
             chats_list = await json_action.open_json('app/crud/data/chats.json')
             kw_list = await json_action.open_json('app/crud/data/keywords.json')
             chl1, chl2 = await self.split_chats_list(chats_list)
+            logger.info(f'chat_list_1 {len(chl1)}, chat_list_2 {len(chl2)}')
             sess1, sess2 = env.str('telethon_session'), env.str('telethon_session2')
             monitor = config_telethon.TelethonMonitorChats(sess1)
             monitor2 = config_telethon.TelethonMonitorChats(sess2)
